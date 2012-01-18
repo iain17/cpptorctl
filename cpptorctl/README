@@ -1,0 +1,25 @@
+$Id$
+
+* Thu Dec  8 20:40:18 CST 2011
+
+this attempts to port the following revision of pytorctl
+(git://git.torproject.org/git/pytorctl):
+
+-----------
+commit 93f0f625e5deab79002dac2d39a4ea3ecaaa2f8e
+Author: Mike Perry <mikeperry-git@fscked.org>
+Date:   Mon Dec 6 12:58:07 2010 -0800
+
+    Add some minimal support for extrainfo documents.
+-----------
+
+in the pytorctl, the "sorted_r" list is passed around and used copies
+being made, so changes to the list (i.e., order of the routers in the
+list) in one place will reflect in all other places. (the elements
+themselves are pointers, which our cpp already mirrors the behavior.)
+
+so, in cpptorctl, we also pass the sorted_r around as pointer. NOT yet
+tested.
+
+dependencies (on ubuntu 11.04):
+  liblog4cxx10-dev libboost-thread-dev libboost-regex-dev libboost-system-dev
