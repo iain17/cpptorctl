@@ -1,0 +1,3 @@
+Port of Mike Perry's python Tor controller ([pytorctl](https://gitweb.torproject.org/pytorctl.git)) library to C++.
+
+NOTE: This is "research-quality," mostly untested code. Elegance is currently not my top priority, so there are plenty of hacks/inefficiencies. I am putting the code here only with the hope that others who happen to need similar functionality do not have to code everything from scratch.
